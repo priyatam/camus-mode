@@ -13,6 +13,7 @@
 (load "~/.emacs.d/src/keybindings.el")
 (load "~/.emacs.d/src/markups.el")
 (load "~/.emacs.d/src/typography.el")
+(load "~/.emacs.d/src/code.el")
 
 ;;(set-exec-path-from-shell)
 (add-to-list 'exec-path "/usr/local/bin")
@@ -32,10 +33,13 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-	("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default))))
+	("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
+ '(package-selected-packages
+   (quote
+	(rainbow-delimiters yaml-mode writeroom-mode web-mode use-package smart-mode-line paredit multiple-cursors markdown-mode magit inf-clojure helm golden-ratio git-timemachine expand-region exec-path-from-shell emmet-mode cask))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Source Code Pro" :height 150 :weight normal :slant normal :width normal)))))
+ '(default ((t (:family "Clear Sans Medium" :height 180 :weight medium :slant normal :width normal)))))
