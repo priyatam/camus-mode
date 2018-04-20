@@ -38,6 +38,26 @@
 
 ;; Typopunct
 
+(defconst typopunct-ellipsis (decode-char 'ucs #x2026))
+(defconst typopunct-middot   (decode-char 'ucs #x2219))
+(defun typopunct-insert-ellipsis-or-middot (arg)
+  "Change three consecutive dots to a typographical ellipsis mark."
+  (interactive "p")
+  (cond
+   ((and (= 1 arg)
+		 (eq (char-before) ?^))
+	(delete-char -1)
+	(insert typopunct-middot))
+   ((and (= 1 arg)
+		 (eq this-command last-command)
+		 (looking-back "\\.\\."))
+	(replace-match "")
+	(insert typopunct-ellipsis))
+   (t
+	(self-insert-command arg))))
+
+(define-key typopunct-map "." 'typopunct-insert-ellipsis-or-middot)
+
 (defun init()
   (require 'typopunct)
   (typopunct-change-language 'english)
