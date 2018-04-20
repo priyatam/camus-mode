@@ -2,7 +2,7 @@
 
 ;; Resets
 
-(toggle-frame-fullscreen)
+;;(toggle-frame-fullscreen)
 
 (setq column-number-mode t)
 (setq-default tab-width 4)

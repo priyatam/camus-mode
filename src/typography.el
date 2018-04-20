@@ -1,5 +1,9 @@
 
 (require 'writeroom-mode)
+(require 'markdown-mode)
+
+(load "~/.emacs.d/lib/typopunct.el")
+(require 'typopunct)
 
 ;; Smart line -----
 
@@ -11,8 +15,8 @@
 (global-prettify-symbols-mode 1)
 
 (custom-set-faces
- '(default ((t (:family "Clear Sans Medium"
-						:height 180
+ '(default ((t (:family "Source Code Pro Light"
+						:height 200
 						:weight medium
 						:slant normal
 						:width normal)))))
@@ -31,3 +35,12 @@
 (global-set-key (kbd "C-x C-w") 'writeroom-mode)
 (global-writeroom-mode)
 (setq writeroom-major-modes '(text-mode clojure-mode clojurescript-mode))
+
+;; Typopunct
+
+(defun init()
+  (require 'typopunct)
+  (typopunct-change-language 'english)
+  (typopunct-mode 1))
+
+(add-hook 'markdown-mode-hook 'init)
