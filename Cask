@@ -22,6 +22,4 @@
 (depends-on "whitespace")
 (depends-on "writeroom-mode")
 (depends-on "yaml-mode")
-(depends-on "clojure-mode")
-(depends-on "inf-clojure")
 (depends-on "rainbow-delimiters")
