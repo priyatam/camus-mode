@@ -13,7 +13,6 @@
 (load "~/.emacs.d/src/keybindings.el")
 (load "~/.emacs.d/src/markups.el")
 (load "~/.emacs.d/src/typography.el")
-(load "~/.emacs.d/src/code.el")
 
 ;;(set-exec-path-from-shell)
 (add-to-list 'exec-path "/usr/local/bin")
@@ -26,6 +25,7 @@
 
 (add-hook 'after-init-hook
           (lambda () (setq gc-cons-threshold sanityinc/initial-gc-cons-threshold)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

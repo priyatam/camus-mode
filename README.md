@@ -16,6 +16,5 @@ OSX:
 	brew install cask
 	cask install
 	
-Clone this repo into ~/.emacs.d and start Emacs. If all goes well, your emacs is good to go
-with all packages including the following:
+Clone this repo into ~/.emacs.d and start Emacs. If all goes well your emacs is good to go.
 
