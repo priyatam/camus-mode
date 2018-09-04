@@ -9,7 +9,6 @@
 (load "~/.emacs.d/src/gui.el")
 (load "~/.emacs.d/src/files.el")
 (load "~/.emacs.d/src/git.el")
-(load "~/.emacs.d/src/css.el")
 (load "~/.emacs.d/src/keybindings.el")
 (load "~/.emacs.d/src/markups.el")
 (load "~/.emacs.d/src/typography.el")
@@ -25,21 +24,3 @@
 
 (add-hook 'after-init-hook
           (lambda () (setq gc-cons-threshold sanityinc/initial-gc-cons-threshold)))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-	("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
- '(package-selected-packages
-   (quote
-	(rainbow-delimiters yaml-mode writeroom-mode web-mode use-package smart-mode-line paredit multiple-cursors markdown-mode magit inf-clojure helm golden-ratio git-timemachine expand-region exec-path-from-shell emmet-mode cask))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Clear Sans Medium" :height 180 :weight medium :slant normal :width normal)))))
